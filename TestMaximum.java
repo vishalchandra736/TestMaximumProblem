@@ -2,16 +2,16 @@ package com.blz.generices;
 
 public class TestMaximum {
     public static void main(String[] args) {
-        Integer firstNum = 11;
-        Integer secondNum = 321;
-        Integer thirdNum = 111;
-        System.out.println("Maximum among three integer");
+        Float firstNum = 11.4F;
+        Float secondNum = 122.7F;
+        Float thirdNum = 311.1F;
+        System.out.println("Maximum among three float");
         TestMaximum testMaximum = new TestMaximum();
         testMaximum.findMax(firstNum, secondNum, thirdNum);
     }
 
-    private void findMax(Integer firstNum, Integer secondNum, Integer thirdNum) {
-        Integer maxNum;
+    private void findMax(Float firstNum, Float secondNum, Float thirdNum) {
+        Float maxNum;
         if (firstNum.compareTo(secondNum) > 0 && firstNum.compareTo(thirdNum) > 0) {
             maxNum = firstNum;
         } else if (secondNum.compareTo(thirdNum) > 0) {
@@ -19,6 +19,6 @@ public class TestMaximum {
         } else {
             maxNum = thirdNum;
         }
-        System.out.println("Maximum integer is " + maxNum + " among " + firstNum + ", " + secondNum + ", " + thirdNum);
+        System.out.println("Maximum float is " + maxNum + " among " + firstNum + ", " + secondNum + ", " + thirdNum);
     }
 }
