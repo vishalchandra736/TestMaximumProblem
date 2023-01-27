@@ -2,23 +2,23 @@ package com.blz.generices;
 
 public class TestMaximum {
     public static void main(String[] args) {
-        Float firstNum = 11.4F;
-        Float secondNum = 122.7F;
-        Float thirdNum = 311.1F;
-        System.out.println("Maximum among three float");
+        String firstString = "Apple";
+        String secondString = "Peach";
+        String thirdString = "Banana";
+        System.out.println("Maximum among three strings");
         TestMaximum testMaximum = new TestMaximum();
-        testMaximum.findMax(firstNum, secondNum, thirdNum);
+        testMaximum.findMax(firstString, secondString, thirdString);
     }
 
-    private void findMax(Float firstNum, Float secondNum, Float thirdNum) {
-        Float maxNum;
-        if (firstNum.compareTo(secondNum) > 0 && firstNum.compareTo(thirdNum) > 0) {
-            maxNum = firstNum;
-        } else if (secondNum.compareTo(thirdNum) > 0) {
-            maxNum = secondNum;
+    private void findMax(String firstString, String secondString, String thirdString) {
+        String maxString;
+        if (firstString.compareTo(secondString) > 0 && firstString.compareTo(thirdString) > 0) {
+            maxString = firstString;
+        } else if (secondString.compareTo(thirdString) > 0) {
+            maxString = secondString;
         } else {
-            maxNum = thirdNum;
+            maxString = thirdString;
         }
-        System.out.println("Maximum float is " + maxNum + " among " + firstNum + ", " + secondNum + ", " + thirdNum);
+        System.out.println("Maximum float is " + maxString + " among " + firstString + ", " + secondString + ", " + thirdString);
     }
 }
