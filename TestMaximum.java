@@ -17,9 +17,11 @@ public class TestMaximum <T extends Comparable <T>>{
         this.varFour = varFour;
         this.varFive = varFive;
     }
-
     public void findMax() {
         TestMaximum.max(this.varOne, this.varTwo, this.varThree, this.varFour, this.varFive);
+    }
+    public static <E> void printMax(E max, ArrayList<E> list ) {
+        System.out.println(max + " is maximum among " + list);
     }
     public static void main(String[] args) {
         Integer fNum = 11;
@@ -43,12 +45,12 @@ public class TestMaximum <T extends Comparable <T>>{
         max(fString, sString, tString, string4, string5);
     }
     public static <E extends Comparable<E>> void max(E firstVar, E secondVar, E thirdVar, E fourthVar, E fifthVar) {
-        ArrayList<E> varList = new ArrayList<>();
+        ArrayList <E> varList = new ArrayList<>();
         varList.add(firstVar);
         varList.add(secondVar);
         varList.add(thirdVar);
         varList.add(fourthVar);
         varList.add(fifthVar);
-        System.out.println(Collections.max(varList) + " is the maximum out of " + varList);
+        printMax(Collections.max(varList), varList);
     }
 }
